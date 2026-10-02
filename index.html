@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIMEZONE - Watch Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">TIMEZONE</div>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#watches">Watches</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <input type="text" id="searchInput" placeholder="Search watches..." />
+          <button class="cart-btn" onclick="openCart()">
+            🛒 Cart <span id="cartCount">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Find Your Perfect Watch</h1>
+        <p>Discover stylish and reliable watches for every occasion.</p>
+        <a href="#watches" class="shop-btn">Shop Now</a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800"
+          alt="Watch"
+        />
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Shop By Category</h2>
+
+      <div class="category-container">
+        <div class="category-box">Men's Watches</div>
+        <div class="category-box">Women's Watches</div>
+        <div class="category-box">Smart Watches</div>
+        <div class="category-box">Sports Watches</div>
+      </div>
+    </section>
+
+    <section class="products" id="watches">
+      <h2>Our Watches</h2>
+
+      <div class="product-container" id="productContainer">
+        <div class="product-card" data-name="Classic Black Watch">
+          <img
+            src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600"
+            alt="Classic Black Watch"
+          />
+          <h3>Classic Black Watch</h3>
+          <p>Simple and stylish everyday watch.</p>
+          <div class="rating">★★★★★</div>
+          <h4>₹2,499</h4>
+          <button onclick="addToCart('Classic Black Watch', 2499)">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card" data-name="Silver Steel Watch">
+          <img
+            src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600"
+            alt="Silver Steel Watch"
+          />
+          <h3>Silver Steel Watch</h3>
+          <p>Elegant stainless steel design.</p>
+          <div class="rating">★★★★☆</div>
+          <h4>₹3,299</h4>
+          <button onclick="addToCart('Silver Steel Watch', 3299)">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card" data-name="Golden Premium Watch">
+          <img
+            src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600"
+            alt="Golden Premium Watch"
+          />
+          <h3>Golden Premium Watch</h3>
+          <p>Classic golden finish for special occasions.</p>
+          <div class="rating">★★★★★</div>
+          <h4>₹4,999</h4>
+          <button onclick="addToCart('Golden Premium Watch', 4999)">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card" data-name="Sport Watch">
+          <img
+            src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600"
+            alt="Sport Watch"
+          />
+          <h3>Sport Watch</h3>
+          <p>Perfect watch for an active lifestyle.</p>
+          <div class="rating">★★★★☆</div>
+          <h4>₹2,799</h4>
+          <button onclick="addToCart('Sport Watch', 2799)">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Smart Watch">
+          <img
+            src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600"
+            alt="Smart Watch"
+          />
+          <h3>Smart Watch</h3>
+          <p>Modern smartwatch with useful features.</p>
+          <div class="rating">★★★★★</div>
+          <h4>₹5,499</h4>
+          <button onclick="addToCart('Smart Watch', 5499)">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Minimal Black Watch">
+          <img
+            src="https://images.unsplash.com/photo-1495857000853-fe46c8aefc30?w=600"
+            alt="Minimal Black Watch"
+          />
+          <h3>Minimal Black Watch</h3>
+          <p>Clean design for a modern look.</p>
+          <div class="rating">★★★★☆</div>
+          <h4>₹1,999</h4>
+          <button onclick="addToCart('Minimal Black Watch', 1999)">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card" data-name="Leather Strap Watch">
+          <img
+            src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600"
+            alt="Leather Strap Watch"
+          />
+          <h3>Leather Strap Watch</h3>
+          <p>Comfortable leather strap with classic dial.</p>
+          <div class="rating">★★★★★</div>
+          <h4>₹2,699</h4>
+          <button onclick="addToCart('Leather Strap Watch', 2699)">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card" data-name="Chronograph Watch">
+          <img
+            src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600"
+            alt="Chronograph Watch"
+          />
+          <h3>Chronograph Watch</h3>
+          <p>Stylish chronograph design for everyday use.</p>
+          <div class="rating">★★★★☆</div>
+          <h4>₹3,999</h4>
+          <button onclick="addToCart('Chronograph Watch', 3999)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About TIMEZONE</h2>
+      <p>
+        TIMEZONE is a simple watch store created for people who love stylish,
+        comfortable and reliable watches. We offer different designs for
+        everyday wear, sports and special occasions.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-box">
+        <button class="close-btn" onclick="closeCart()">×</button>
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <h3>Total: ₹<span id="cartTotal">0</span></h3>
+      </div>
+    </div>
+
+    <div id="notification">Added to Cart!</div>
+
+    <footer>
+      <div>
+        <h3>TIMEZONE</h3>
+        <p>Your time, your style.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#watches">Watches</a>
+        <a href="#about">About</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: timezone@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+
+      <p class="copyright">© 2026 TIMEZONE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
